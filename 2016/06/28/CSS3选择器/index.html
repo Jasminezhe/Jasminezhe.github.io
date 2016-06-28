@@ -1,0 +1,598 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="css3选择器1、子元素选择器
+格式：E &amp;gt; F
+子元素选择器选择的是父元素E的子类，即第一代子元素，子孙不会被选；
+后代选择器选的是父元素E的所有子类，子子孙孙都会被选；
+
+2、兄弟选择器(1) 相邻兄弟选择器
+格式：E + F
+拥有同一个父元素；
+两个元素是相邻的，并且只对下面的元素有用；
+有且只有一个元素会被选中；
+
+（2）通用兄弟选择器
+格式：E ~ F
+有同一个父元素；
+元素可以不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3选择器">
+<meta property="og:url" content="http://yoursite.com/2016/06/28/CSS3选择器/index.html">
+<meta property="og:site_name" content="Boom Sha Ka La Ka">
+<meta property="og:description" content="css3选择器1、子元素选择器
+格式：E &amp;gt; F
+子元素选择器选择的是父元素E的子类，即第一代子元素，子孙不会被选；
+后代选择器选的是父元素E的所有子类，子子孙孙都会被选；
+
+2、兄弟选择器(1) 相邻兄弟选择器
+格式：E + F
+拥有同一个父元素；
+两个元素是相邻的，并且只对下面的元素有用；
+有且只有一个元素会被选中；
+
+（2）通用兄弟选择器
+格式：E ~ F
+有同一个父元素；
+元素可以不">
+<meta property="og:updated_time" content="2016-06-28T11:39:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3选择器">
+<meta name="twitter:description" content="css3选择器1、子元素选择器
+格式：E &amp;gt; F
+子元素选择器选择的是父元素E的子类，即第一代子元素，子孙不会被选；
+后代选择器选的是父元素E的所有子类，子子孙孙都会被选；
+
+2、兄弟选择器(1) 相邻兄弟选择器
+格式：E + F
+拥有同一个父元素；
+两个元素是相邻的，并且只对下面的元素有用；
+有且只有一个元素会被选中；
+
+（2）通用兄弟选择器
+格式：E ~ F
+有同一个父元素；
+元素可以不">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/28/CSS3选择器/"/>
+
+  <title> CSS3选择器 | Boom Sha Ka La Ka </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Boom Sha Ka La Ka</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">HELLO~~~</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS3选择器
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-06-28T16:20:08+08:00" content="2016-06-28">
+              2016-06-28
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="css3选择器"><a href="#css3选择器" class="headerlink" title="css3选择器"></a>css3选择器</h1><h2 id="1、子元素选择器"><a href="#1、子元素选择器" class="headerlink" title="1、子元素选择器"></a>1、子元素选择器</h2><ul>
+<li><h3 id="格式：E-gt-F"><a href="#格式：E-gt-F" class="headerlink" title="格式：E &gt; F"></a>格式：E &gt; F</h3></li>
+<li><h3 id="子元素选择器选择的是父元素E的子类，即第一代子元素，子孙不会被选；"><a href="#子元素选择器选择的是父元素E的子类，即第一代子元素，子孙不会被选；" class="headerlink" title="子元素选择器选择的是父元素E的子类，即第一代子元素，子孙不会被选；"></a>子元素选择器选择的是父元素E的子类，即第一代子元素，子孙不会被选；</h3></li>
+<li><h3 id="后代选择器选的是父元素E的所有子类，子子孙孙都会被选；"><a href="#后代选择器选的是父元素E的所有子类，子子孙孙都会被选；" class="headerlink" title="后代选择器选的是父元素E的所有子类，子子孙孙都会被选；"></a>后代选择器选的是父元素E的所有子类，子子孙孙都会被选；</h3></li>
+</ul>
+<h2 id="2、兄弟选择器"><a href="#2、兄弟选择器" class="headerlink" title="2、兄弟选择器"></a>2、兄弟选择器</h2><h3 id="1-相邻兄弟选择器"><a href="#1-相邻兄弟选择器" class="headerlink" title="(1) 相邻兄弟选择器"></a>(1) 相邻兄弟选择器</h3><ul>
+<li><h4 id="格式：E-F"><a href="#格式：E-F" class="headerlink" title="格式：E + F"></a>格式：E + F</h4></li>
+<li><h4 id="拥有同一个父元素；"><a href="#拥有同一个父元素；" class="headerlink" title="拥有同一个父元素；"></a>拥有同一个父元素；</h4></li>
+<li><h4 id="两个元素是相邻的，并且只对下面的元素有用；"><a href="#两个元素是相邻的，并且只对下面的元素有用；" class="headerlink" title="两个元素是相邻的，并且只对下面的元素有用；"></a>两个元素是相邻的，并且只对下面的元素有用；</h4></li>
+<li><h4 id="有且只有一个元素会被选中；"><a href="#有且只有一个元素会被选中；" class="headerlink" title="有且只有一个元素会被选中；"></a>有且只有一个元素会被选中；</h4></li>
+</ul>
+<h3 id="（2）通用兄弟选择器"><a href="#（2）通用兄弟选择器" class="headerlink" title="（2）通用兄弟选择器"></a>（2）通用兄弟选择器</h3><ul>
+<li><h4 id="格式：E-F-1"><a href="#格式：E-F-1" class="headerlink" title="格式：E ~ F"></a>格式：E ~ F</h4></li>
+<li><h4 id="有同一个父元素；"><a href="#有同一个父元素；" class="headerlink" title="有同一个父元素；"></a>有同一个父元素；</h4></li>
+<li><h4 id="元素可以不相邻，但是也只能选择下面的元素；"><a href="#元素可以不相邻，但是也只能选择下面的元素；" class="headerlink" title="元素可以不相邻，但是也只能选择下面的元素；"></a>元素可以不相邻，但是也只能选择下面的元素；</h4></li>
+<li><h4 id="选择的元素个数不受限制；"><a href="#选择的元素个数不受限制；" class="headerlink" title="选择的元素个数不受限制；"></a>选择的元素个数不受限制；</h4></li>
+</ul>
+<h2 id="3、属性选择器"><a href="#3、属性选择器" class="headerlink" title="3、属性选择器"></a>3、属性选择器</h2><h3 id="（1）E-attr"><a href="#（1）E-attr" class="headerlink" title="（1）E[attr]"></a>（1）E[attr]</h3><h4 id="所有拥有attr属性的标签进行设置；例如-class-会对所有设置了class名属性的标签进行样式设置；"><a href="#所有拥有attr属性的标签进行设置；例如-class-会对所有设置了class名属性的标签进行样式设置；" class="headerlink" title="所有拥有attr属性的标签进行设置；例如[class]会对所有设置了class名属性的标签进行样式设置；"></a>所有拥有attr属性的标签进行设置；例如[class]会对所有设置了class名属性的标签进行样式设置；</h4><h3 id="（2）E-attr-”value”"><a href="#（2）E-attr-”value”" class="headerlink" title="（2）E[attr=”value”]"></a>（2）E[attr=”value”]</h3><h4 id="attr属性有具体的值；例如-class-“div1”-，只能选择class名为div1的标签进行样式设置；"><a href="#attr属性有具体的值；例如-class-“div1”-，只能选择class名为div1的标签进行样式设置；" class="headerlink" title="attr属性有具体的值；例如[class=“div1”]，只能选择class名为div1的标签进行样式设置；"></a>attr属性有具体的值；例如[class=“div1”]，只能选择class名为div1的标签进行样式设置；</h4><h3 id="（3）E-attr-“value”"><a href="#（3）E-attr-“value”" class="headerlink" title="（3）E[attr~=“value”]"></a>（3）E[attr~=“value”]</h3><h4 id="表示几个以空格隔开的属性值中包含了“value”。需要注意的是，一定是要有空格隔开的几个属性才会有效。"><a href="#表示几个以空格隔开的属性值中包含了“value”。需要注意的是，一定是要有空格隔开的几个属性才会有效。" class="headerlink" title="表示几个以空格隔开的属性值中包含了“value”。需要注意的是，一定是要有空格隔开的几个属性才会有效。"></a>表示几个以空格隔开的属性值中包含了“value”。需要注意的是，一定是要有空格隔开的几个属性才会有效。</h4><h3 id="（4）E-attr-“value”"><a href="#（4）E-attr-“value”" class="headerlink" title="（4）E[attr^=“value”]"></a>（4）E[attr^=“value”]</h3><h4 id="以value开头的值；"><a href="#以value开头的值；" class="headerlink" title="以value开头的值；"></a>以value开头的值；</h4><h3 id="（5）E-attr-“value”"><a href="#（5）E-attr-“value”" class="headerlink" title="（5）E[attr$=“value”]"></a>（5）E[attr$=“value”]</h3><h4 id="以value结尾的值；"><a href="#以value结尾的值；" class="headerlink" title="以value结尾的值；"></a>以value结尾的值；</h4><h3 id="（6）E-attr-“value”"><a href="#（6）E-attr-“value”" class="headerlink" title="（6）E[attr*=“value”]"></a>（6）E[attr*=“value”]</h3><h4 id="包含了value的值；"><a href="#包含了value的值；" class="headerlink" title="包含了value的值；"></a>包含了value的值；</h4><h3 id="（7）E-attr-“value”"><a href="#（7）E-attr-“value”" class="headerlink" title="（7）E[attr|=“value”]"></a>（7）E[attr|=“value”]</h3><h4 id="以value或value-开头；与（4）的区别是（4）中的value-“div1”时，class名可以是div1234…，只要以div1开头就可以；但是（7）中的class属性只能是div1或者以div1-开头。"><a href="#以value或value-开头；与（4）的区别是（4）中的value-“div1”时，class名可以是div1234…，只要以div1开头就可以；但是（7）中的class属性只能是div1或者以div1-开头。" class="headerlink" title="以value或value-开头；与（4）的区别是（4）中的value=“div1”时，class名可以是div1234…，只要以div1开头就可以；但是（7）中的class属性只能是div1或者以div1-开头。"></a>以value或value-开头；与（4）的区别是（4）中的value=“div1”时，class名可以是div1234…，只要以div1开头就可以；但是（7）中的class属性只能是div1或者以div1-开头。</h4><h2 id="4、伪类选择器"><a href="#4、伪类选择器" class="headerlink" title="4、伪类选择器"></a>4、伪类选择器</h2><h3 id="通常用于表单元素"><a href="#通常用于表单元素" class="headerlink" title="通常用于表单元素"></a>通常用于表单元素</h3><h3 id="（1）：enabled"><a href="#（1）：enabled" class="headerlink" title="（1）：enabled"></a>（1）：enabled</h3><h4 id="在默认情况之下，表单元素都处在可用状态。那么我们可以通过伪选择器“-enabled”对这些表单元素设置样式。"><a href="#在默认情况之下，表单元素都处在可用状态。那么我们可以通过伪选择器“-enabled”对这些表单元素设置样式。" class="headerlink" title="在默认情况之下，表单元素都处在可用状态。那么我们可以通过伪选择器“:enabled”对这些表单元素设置样式。"></a>在默认情况之下，表单元素都处在可用状态。那么我们可以通过伪选择器“:enabled”对这些表单元素设置样式。</h4><h3 id="（2）：disabled"><a href="#（2）：disabled" class="headerlink" title="（2）：disabled"></a>（2）：disabled</h3><h4 id="disabled”选择器刚好与“-enabled”选择器相反，用来选择不可用表单元素。要正常使用“-disabled”选择器，需要在表单元素的HTML中设置“disabled”属性。"><a href="#disabled”选择器刚好与“-enabled”选择器相反，用来选择不可用表单元素。要正常使用“-disabled”选择器，需要在表单元素的HTML中设置“disabled”属性。" class="headerlink" title=":disabled”选择器刚好与“:enabled”选择器相反，用来选择不可用表单元素。要正常使用“:disabled”选择器，需要在表单元素的HTML中设置“disabled”属性。"></a>:disabled”选择器刚好与“:enabled”选择器相反，用来选择不可用表单元素。要正常使用“:disabled”选择器，需要在表单元素的HTML中设置“disabled”属性。</h4><h3 id="（3）：checked"><a href="#（3）：checked" class="headerlink" title="（3）：checked"></a>（3）：checked</h3><h4 id="针对checkbox复选框，设置的是复选框被选中以后的样式；"><a href="#针对checkbox复选框，设置的是复选框被选中以后的样式；" class="headerlink" title="针对checkbox复选框，设置的是复选框被选中以后的样式；"></a>针对checkbox复选框，设置的是复选框被选中以后的样式；</h4><h3 id="（4）：focus"><a href="#（4）：focus" class="headerlink" title="（4）：focus"></a>（4）：focus</h3><h4 id="设置表单元素被选中，即聚焦状态下；"><a href="#设置表单元素被选中，即聚焦状态下；" class="headerlink" title="设置表单元素被选中，即聚焦状态下；"></a>设置表单元素被选中，即聚焦状态下；</h4><h2 id="5、nth：选择器"><a href="#5、nth：选择器" class="headerlink" title="5、nth：选择器"></a>5、nth：选择器</h2><h3 id="（1）：first-child"><a href="#（1）：first-child" class="headerlink" title="（1）：first-child"></a>（1）：first-child</h3><h4 id="first-child-选择器用于选取属于其父元素的首个子元素的指定选择器；"><a href="#first-child-选择器用于选取属于其父元素的首个子元素的指定选择器；" class="headerlink" title=":first-child 选择器用于选取属于其父元素的首个子元素的指定选择器；"></a>:first-child 选择器用于选取属于其父元素的首个子元素的指定选择器；</h4><h3 id="（2）：last-child"><a href="#（2）：last-child" class="headerlink" title="（2）：last-child"></a>（2）：last-child</h3><h4 id="last-child-选择器匹配属于其父元素的最后一个子元素的每个元素；"><a href="#last-child-选择器匹配属于其父元素的最后一个子元素的每个元素；" class="headerlink" title=":last-child 选择器匹配属于其父元素的最后一个子元素的每个元素；"></a>:last-child 选择器匹配属于其父元素的最后一个子元素的每个元素；</h4><h3 id="（3）：empty"><a href="#（3）：empty" class="headerlink" title="（3）：empty"></a>（3）：empty</h3><h4 id="empty选择的元素里面没有任何内容；"><a href="#empty选择的元素里面没有任何内容；" class="headerlink" title=":empty选择的元素里面没有任何内容；"></a>:empty选择的元素里面没有任何内容；</h4><h3 id="（4）-nth-child-length"><a href="#（4）-nth-child-length" class="headerlink" title="（4）:nth-child(length)"></a>（4）:nth-child(length)</h3><h4 id="nth-child-length-参数是具体数字；"><a href="#nth-child-length-参数是具体数字；" class="headerlink" title=":nth-child(length)参数是具体数字；"></a>:nth-child(length)参数是具体数字；</h4><h3 id="（5）-nth-child-n"><a href="#（5）-nth-child-n" class="headerlink" title="（5）:nth-child(n)"></a>（5）:nth-child(n)</h3><h4 id="nth-child-n-参数是n-n从1开始计算；"><a href="#nth-child-n-参数是n-n从1开始计算；" class="headerlink" title=":nth-child(n)参数是n,n从1开始计算；"></a>:nth-child(n)参数是n,n从1开始计算；</h4><h3 id="（6）-nth-child-2n"><a href="#（6）-nth-child-2n" class="headerlink" title="（6）:nth-child(2n)"></a>（6）:nth-child(2n)</h3><h4 id="nth-child-2n-n的倍数选择，n从1开始算；"><a href="#nth-child-2n-n的倍数选择，n从1开始算；" class="headerlink" title=":nth-child(2n) n的倍数选择，n从1开始算；"></a>:nth-child(2n) n的倍数选择，n从1开始算；</h4><h3 id="（7）-nth-child-n-length"><a href="#（7）-nth-child-n-length" class="headerlink" title="（7）:nth-child(n+length)"></a>（7）:nth-child(n+length)</h3><h4 id="选择大于length后面的元素；"><a href="#选择大于length后面的元素；" class="headerlink" title="选择大于length后面的元素；"></a>选择大于length后面的元素；</h4><h3 id="（8）-nth-child-n-length"><a href="#（8）-nth-child-n-length" class="headerlink" title="（8）:nth-child(-n+length)"></a>（8）:nth-child(-n+length)</h3><h4 id="选择小于length前面的元素；"><a href="#选择小于length前面的元素；" class="headerlink" title="选择小于length前面的元素；"></a>选择小于length前面的元素；</h4><h3 id="（9）-nth-child-2n-1"><a href="#（9）-nth-child-2n-1" class="headerlink" title="（9）:nth-child(2n+1);"></a>（9）:nth-child(2n+1);</h3><h4 id="表示隔几选一，odd-even；"><a href="#表示隔几选一，odd-even；" class="headerlink" title="表示隔几选一，odd even；"></a>表示隔几选一，odd even；</h4><h2 id="6、否定选择器"><a href="#6、否定选择器" class="headerlink" title="6、否定选择器"></a>6、否定选择器</h2><h3 id="格式：-nbsp-nbsp-：not"><a href="#格式：-nbsp-nbsp-：not" class="headerlink" title="格式：&nbsp;&nbsp;：not"></a>格式：&nbsp;&nbsp;：not</h3><h3 id="用法：通常搭配属性选择器使用；"><a href="#用法：通常搭配属性选择器使用；" class="headerlink" title="用法：通常搭配属性选择器使用；"></a>用法：通常搭配属性选择器使用；</h3><h2 id="7、伪元素"><a href="#7、伪元素" class="headerlink" title="7、伪元素"></a>7、伪元素</h2><h3 id="（1）-first-letter"><a href="#（1）-first-letter" class="headerlink" title="（1）::first-letter"></a>（1）::first-letter</h3><h4 id="first-letter-选择文本块的第一个字母或者文字，除非在同一行里面包含一些其它元素，不过这个主要运用于段落排版上多，可以用于设置首字下沉；"><a href="#first-letter-选择文本块的第一个字母或者文字，除非在同一行里面包含一些其它元素，不过这个主要运用于段落排版上多，可以用于设置首字下沉；" class="headerlink" title="::first-letter 选择文本块的第一个字母或者文字，除非在同一行里面包含一些其它元素，不过这个主要运用于段落排版上多，可以用于设置首字下沉；"></a>::first-letter 选择文本块的第一个字母或者文字，除非在同一行里面包含一些其它元素，不过这个主要运用于段落排版上多，可以用于设置首字下沉；</h4><h3 id="（2）-first-line"><a href="#（2）-first-line" class="headerlink" title="（2）::first-line"></a>（2）::first-line</h3><h4 id="选择元素的第一行"><a href="#选择元素的第一行" class="headerlink" title="选择元素的第一行"></a>选择元素的第一行</h4><h3 id="（3）-before、-after"><a href="#（3）-before、-after" class="headerlink" title="（3）::before、::after"></a>（3）::before、::after</h3><h4 id="before、-after这两个主要用来给元素的前面或后面插入内容，要和content配合使用，并且只能设置文本内容，通常可以用于clear清除浮动，不用增加额外标签；"><a href="#before、-after这两个主要用来给元素的前面或后面插入内容，要和content配合使用，并且只能设置文本内容，通常可以用于clear清除浮动，不用增加额外标签；" class="headerlink" title="::before、::after这两个主要用来给元素的前面或后面插入内容，要和content配合使用，并且只能设置文本内容，通常可以用于clear清除浮动，不用增加额外标签；"></a>::before、::after这两个主要用来给元素的前面或后面插入内容，要和content配合使用，并且只能设置文本内容，通常可以用于clear清除浮动，不用增加额外标签；</h4><h3 id="（4）-selection"><a href="#（4）-selection" class="headerlink" title="（4）::selection"></a>（4）::selection</h3><h4 id="用来改变浏览网页选中文本的默认效果，-selection只能设置两个属性，一个是background-另一个就是color属性，设置其他属性是没有任何效果的。"><a href="#用来改变浏览网页选中文本的默认效果，-selection只能设置两个属性，一个是background-另一个就是color属性，设置其他属性是没有任何效果的。" class="headerlink" title="用来改变浏览网页选中文本的默认效果，::selection只能设置两个属性，一个是background,另一个就是color属性，设置其他属性是没有任何效果的。"></a>用来改变浏览网页选中文本的默认效果，::selection只能设置两个属性，一个是background,另一个就是color属性，设置其他属性是没有任何效果的。</h4>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/27/HTML5语义化标签/" rel="next" title="HTML5语义化标签">
+                <i class="fa fa-chevron-left"></i> HTML5语义化标签
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Jamsine" />
+          <p class="site-author-name" itemprop="name">Jamsine</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#css3选择器"><span class="nav-number">1.</span> <span class="nav-text">css3选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、子元素选择器"><span class="nav-number">1.1.</span> <span class="nav-text">1、子元素选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格式：E-gt-F"><span class="nav-number">1.1.1.</span> <span class="nav-text">格式：E > F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子元素选择器选择的是父元素E的子类，即第一代子元素，子孙不会被选；"><span class="nav-number">1.1.2.</span> <span class="nav-text">子元素选择器选择的是父元素E的子类，即第一代子元素，子孙不会被选；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后代选择器选的是父元素E的所有子类，子子孙孙都会被选；"><span class="nav-number">1.1.3.</span> <span class="nav-text">后代选择器选的是父元素E的所有子类，子子孙孙都会被选；</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、兄弟选择器"><span class="nav-number">1.2.</span> <span class="nav-text">2、兄弟选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-相邻兄弟选择器"><span class="nav-number">1.2.1.</span> <span class="nav-text">(1) 相邻兄弟选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#格式：E-F"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">格式：E + F</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拥有同一个父元素；"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">拥有同一个父元素；</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#两个元素是相邻的，并且只对下面的元素有用；"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">两个元素是相邻的，并且只对下面的元素有用；</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有且只有一个元素会被选中；"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">有且只有一个元素会被选中；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）通用兄弟选择器"><span class="nav-number">1.2.2.</span> <span class="nav-text">（2）通用兄弟选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#格式：E-F-1"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">格式：E ~ F</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有同一个父元素；"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">有同一个父元素；</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元素可以不相邻，但是也只能选择下面的元素；"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">元素可以不相邻，但是也只能选择下面的元素；</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择的元素个数不受限制；"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">选择的元素个数不受限制；</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、属性选择器"><span class="nav-number">1.3.</span> <span class="nav-text">3、属性选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）E-attr"><span class="nav-number">1.3.1.</span> <span class="nav-text">（1）E[attr]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#所有拥有attr属性的标签进行设置；例如-class-会对所有设置了class名属性的标签进行样式设置；"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">所有拥有attr属性的标签进行设置；例如[class]会对所有设置了class名属性的标签进行样式设置；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）E-attr-”value”"><span class="nav-number">1.3.2.</span> <span class="nav-text">（2）E[attr=”value”]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#attr属性有具体的值；例如-class-“div1”-，只能选择class名为div1的标签进行样式设置；"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">attr属性有具体的值；例如[class=“div1”]，只能选择class名为div1的标签进行样式设置；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（3）E-attr-“value”"><span class="nav-number">1.3.3.</span> <span class="nav-text">（3）E[attr~=“value”]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#表示几个以空格隔开的属性值中包含了“value”。需要注意的是，一定是要有空格隔开的几个属性才会有效。"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">表示几个以空格隔开的属性值中包含了“value”。需要注意的是，一定是要有空格隔开的几个属性才会有效。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（4）E-attr-“value”"><span class="nav-number">1.3.4.</span> <span class="nav-text">（4）E[attr^=“value”]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#以value开头的值；"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">以value开头的值；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（5）E-attr-“value”"><span class="nav-number">1.3.5.</span> <span class="nav-text">（5）E[attr$=“value”]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#以value结尾的值；"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">以value结尾的值；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（6）E-attr-“value”"><span class="nav-number">1.3.6.</span> <span class="nav-text">（6）E[attr*=“value”]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#包含了value的值；"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">包含了value的值；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（7）E-attr-“value”"><span class="nav-number">1.3.7.</span> <span class="nav-text">（7）E[attr|=“value”]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#以value或value-开头；与（4）的区别是（4）中的value-“div1”时，class名可以是div1234…，只要以div1开头就可以；但是（7）中的class属性只能是div1或者以div1-开头。"><span class="nav-number">1.3.7.1.</span> <span class="nav-text">以value或value-开头；与（4）的区别是（4）中的value=“div1”时，class名可以是div1234…，只要以div1开头就可以；但是（7）中的class属性只能是div1或者以div1-开头。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、伪类选择器"><span class="nav-number">1.4.</span> <span class="nav-text">4、伪类选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通常用于表单元素"><span class="nav-number">1.4.1.</span> <span class="nav-text">通常用于表单元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）：enabled"><span class="nav-number">1.4.2.</span> <span class="nav-text">（1）：enabled</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在默认情况之下，表单元素都处在可用状态。那么我们可以通过伪选择器“-enabled”对这些表单元素设置样式。"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">在默认情况之下，表单元素都处在可用状态。那么我们可以通过伪选择器“:enabled”对这些表单元素设置样式。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）：disabled"><span class="nav-number">1.4.3.</span> <span class="nav-text">（2）：disabled</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#disabled”选择器刚好与“-enabled”选择器相反，用来选择不可用表单元素。要正常使用“-disabled”选择器，需要在表单元素的HTML中设置“disabled”属性。"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">:disabled”选择器刚好与“:enabled”选择器相反，用来选择不可用表单元素。要正常使用“:disabled”选择器，需要在表单元素的HTML中设置“disabled”属性。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（3）：checked"><span class="nav-number">1.4.4.</span> <span class="nav-text">（3）：checked</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#针对checkbox复选框，设置的是复选框被选中以后的样式；"><span class="nav-number">1.4.4.1.</span> <span class="nav-text">针对checkbox复选框，设置的是复选框被选中以后的样式；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（4）：focus"><span class="nav-number">1.4.5.</span> <span class="nav-text">（4）：focus</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设置表单元素被选中，即聚焦状态下；"><span class="nav-number">1.4.5.1.</span> <span class="nav-text">设置表单元素被选中，即聚焦状态下；</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、nth：选择器"><span class="nav-number">1.5.</span> <span class="nav-text">5、nth：选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）：first-child"><span class="nav-number">1.5.1.</span> <span class="nav-text">（1）：first-child</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#first-child-选择器用于选取属于其父元素的首个子元素的指定选择器；"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">:first-child 选择器用于选取属于其父元素的首个子元素的指定选择器；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）：last-child"><span class="nav-number">1.5.2.</span> <span class="nav-text">（2）：last-child</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#last-child-选择器匹配属于其父元素的最后一个子元素的每个元素；"><span class="nav-number">1.5.2.1.</span> <span class="nav-text">:last-child 选择器匹配属于其父元素的最后一个子元素的每个元素；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（3）：empty"><span class="nav-number">1.5.3.</span> <span class="nav-text">（3）：empty</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#empty选择的元素里面没有任何内容；"><span class="nav-number">1.5.3.1.</span> <span class="nav-text">:empty选择的元素里面没有任何内容；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（4）-nth-child-length"><span class="nav-number">1.5.4.</span> <span class="nav-text">（4）:nth-child(length)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nth-child-length-参数是具体数字；"><span class="nav-number">1.5.4.1.</span> <span class="nav-text">:nth-child(length)参数是具体数字；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（5）-nth-child-n"><span class="nav-number">1.5.5.</span> <span class="nav-text">（5）:nth-child(n)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nth-child-n-参数是n-n从1开始计算；"><span class="nav-number">1.5.5.1.</span> <span class="nav-text">:nth-child(n)参数是n,n从1开始计算；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（6）-nth-child-2n"><span class="nav-number">1.5.6.</span> <span class="nav-text">（6）:nth-child(2n)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nth-child-2n-n的倍数选择，n从1开始算；"><span class="nav-number">1.5.6.1.</span> <span class="nav-text">:nth-child(2n) n的倍数选择，n从1开始算；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（7）-nth-child-n-length"><span class="nav-number">1.5.7.</span> <span class="nav-text">（7）:nth-child(n+length)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选择大于length后面的元素；"><span class="nav-number">1.5.7.1.</span> <span class="nav-text">选择大于length后面的元素；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（8）-nth-child-n-length"><span class="nav-number">1.5.8.</span> <span class="nav-text">（8）:nth-child(-n+length)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选择小于length前面的元素；"><span class="nav-number">1.5.8.1.</span> <span class="nav-text">选择小于length前面的元素；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（9）-nth-child-2n-1"><span class="nav-number">1.5.9.</span> <span class="nav-text">（9）:nth-child(2n+1);</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#表示隔几选一，odd-even；"><span class="nav-number">1.5.9.1.</span> <span class="nav-text">表示隔几选一，odd even；</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、否定选择器"><span class="nav-number">1.6.</span> <span class="nav-text">6、否定选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格式：-nbsp-nbsp-：not"><span class="nav-number">1.6.1.</span> <span class="nav-text">格式：  ：not</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用法：通常搭配属性选择器使用；"><span class="nav-number">1.6.2.</span> <span class="nav-text">用法：通常搭配属性选择器使用；</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、伪元素"><span class="nav-number">1.7.</span> <span class="nav-text">7、伪元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）-first-letter"><span class="nav-number">1.7.1.</span> <span class="nav-text">（1）::first-letter</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#first-letter-选择文本块的第一个字母或者文字，除非在同一行里面包含一些其它元素，不过这个主要运用于段落排版上多，可以用于设置首字下沉；"><span class="nav-number">1.7.1.1.</span> <span class="nav-text">::first-letter 选择文本块的第一个字母或者文字，除非在同一行里面包含一些其它元素，不过这个主要运用于段落排版上多，可以用于设置首字下沉；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）-first-line"><span class="nav-number">1.7.2.</span> <span class="nav-text">（2）::first-line</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选择元素的第一行"><span class="nav-number">1.7.2.1.</span> <span class="nav-text">选择元素的第一行</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（3）-before、-after"><span class="nav-number">1.7.3.</span> <span class="nav-text">（3）::before、::after</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#before、-after这两个主要用来给元素的前面或后面插入内容，要和content配合使用，并且只能设置文本内容，通常可以用于clear清除浮动，不用增加额外标签；"><span class="nav-number">1.7.3.1.</span> <span class="nav-text">::before、::after这两个主要用来给元素的前面或后面插入内容，要和content配合使用，并且只能设置文本内容，通常可以用于clear清除浮动，不用增加额外标签；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（4）-selection"><span class="nav-number">1.7.4.</span> <span class="nav-text">（4）::selection</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用来改变浏览网页选中文本的默认效果，-selection只能设置两个属性，一个是background-另一个就是color属性，设置其他属性是没有任何效果的。"><span class="nav-number">1.7.4.1.</span> <span class="nav-text">用来改变浏览网页选中文本的默认效果，::selection只能设置两个属性，一个是background,另一个就是color属性，设置其他属性是没有任何效果的。</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jamsine</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
